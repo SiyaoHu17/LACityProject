@@ -1,0 +1,93 @@
+LA Homeless Project Report
+Interactive Homeless Operations Planner and Tracker: Los Angeles County
+
+
+Objective:
+reduce unsheltered by 50% in five years
+track concentration of homeless over time
+identify critical areas to prioritize funding and other resources
+know service need
+
+
+Solution design:
+a measure to estimate homeless density
+a measure to estimate health and safety tisk
+(prioritize areas: unsheltered homelessness, public safety incident, community complaints, danger and health risk of homeless community)
+online mapping application(density, numbers)
+exsisting and potential resources located
+analysis and recommendations
+
+
+Data: LA city+public data
+●	311 Homeless Encampments Requests
+●	Crime and Homeless Victim
+●	Homeless Count Results by Census Tract
+●	Homeless Shelters and Services
+●	Homeless_Count_2017_Results_CD 
+●	Stores Data, Weather, flood and other diasters
+
+Tools:
+●	Tableau
+●	R (ggmap; shinyr; leaflet)
+●	Excel
+
+Factors:
+health
+safety risks: natural factors(disaster:center around natural, weather and temperature);human factors(311call,crime)
+density
+resources
+
+Data collection：
+
+Data cleaning:
+variable selection
+remove missing value, replace N/A
+merge data(counties and blocks info) from disparate sources, automation
+add new variables: violent crime
+
+Metrics:
+vulnerbility score including risk and health (crime%, 311 call%, homeless%, unseltered ratio, 
+number of pending and open encampment request
+
+Make assumptions
+
+Analysis:
+time-based descriptive analysis
+predictive analysis
+geospacial analysis
+risk score that is adjustable
+
+Visualization: bar, stacked bar, line, density, heat map, polygon graph
+●	311 Homeless Encampments Requests
+time series patterns: increasing, weekday high (operation)
+check status:not efficient
+density: LA not efficient
+●	Crime and Homeless Victim
+time series patterns: June, July temperature; weekend evening
+crime type, age(old,young)
+density: Burbank, dt LA
+●	Homeless Count Results by Census Tract
+●	Homeless Shelters and Services
+comparision bt homeless and shelters (density not consistent)
+●	Homeless_Count_2017_Results_CD 
+
+●	Stores Data
+
+
+Solution:
+natural factors:score
+human factors: interative mapping application (https://siyao.shinyapps.io/lacityvis/)
+Shiny R dashborad(mapping preference, customerization: type, zoom..) (https://siyao.shinyapps.io/lacityvis2/)
+KPI, Slider to adjust weight, plot, map, table
+
+Recommendation:
+short-term
+efficency of processing encampment request
+collaboration with stores(no sherlter but store)
+homeless migration because of disaster
+long-term
+ID number with resources, registration: trace migrating, act in time (free haircut)
+
+
+Learnt:
+exclude outliers(large value), then density graph
